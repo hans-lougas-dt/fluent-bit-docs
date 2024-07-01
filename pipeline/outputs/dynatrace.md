@@ -2,7 +2,7 @@
 
 Output your data to [Dynatrace](https://www.dynatrace.com) by utilizing the **http** plugin to send data to Dynatrace [generic log ingest API](https://www.dynatrace.com/support/help/observe-and-explore/logs/log-monitoring/acquire-log-data/log-data-ingest).
 
-Before starting you need to get a Dynatrace API token with the `logs.ingest` (Ingest Logs) scope. Then configure **http** output pluginwith the following HTTP parameters.
+Before starting you need to get a [Dynatrace API](https://docs.dynatrace.com/docs/shortlink/api-authentication) token with the `logs.ingest` (Ingest Logs) scope, and determine your [environment ID](https://docs.dynatrace.com/docs/shortlink/monitoring-environment#environment-id).  Then configure **http** output plugin with the following HTTP parameters.
 
 ## Configuration Parameters
 
