@@ -1,6 +1,10 @@
+---
+description: Send logs to Dynatrace
+---
+
 # Dynatrace
 
-Output your data to [Dynatrace](https://www.dynatrace.com) by utilizing the **http** plugin to send data to Dynatrace [generic log ingest API](https://www.dynatrace.com/support/help/observe-and-explore/logs/log-monitoring/acquire-log-data/log-data-ingest).
+Stream logs to [Dynatrace](https://www.dynatrace.com) by utilizing the **http** plugin to send data to [Dynatrace generic log ingest API](https://docs.dynatrace.com/docs/shortlink/lma-generic-log-ingestion).
 
 Before starting you need to get a [Dynatrace API](https://docs.dynatrace.com/docs/shortlink/api-authentication) token with the `logs.ingest` (Ingest Logs) scope, and determine your [environment ID](https://docs.dynatrace.com/docs/shortlink/monitoring-environment#environment-id).  Then configure **http** output plugin with the following HTTP parameters.
 
@@ -20,9 +24,11 @@ Before starting you need to get a [Dynatrace API](https://docs.dynatrace.com/doc
 | tls                        | Specify to use TLS                                                                                                                                                                                                                  | on                                                 |
 | tls.verify                 | TLS verification                                                                                                                                                                                                                    | off                                                |
 
-### Configuration File
+## Getting Started
 
-In your main configuration file, append the following _Output_ section:
+1. Get a [Dynatrace API](https://docs.dynatrace.com/docs/shortlink/api-authentication) token with the `logs.ingest` (Ingest Logs) scope.
+2. Determine your Dynatrace [environment ID](https://docs.dynatrace.com/docs/shortlink/monitoring-environment#environment-id).
+3. In your main Fluent Bit configuration file, append the following _Output_ section:
 
 ```text
 [OUTPUT]
@@ -41,5 +47,15 @@ In your main configuration file, append the following _Output_ section:
     tls.verify   Off
 ```
 
+4. Once the configuration is applied and new logs are appended, verify their receipt within Dynatrace. This can be done using Dynatrace [Notebooks](https://docs.dynatrace.com/docs/observe-and-explore/dashboards-and-notebooks/notebooks) with a Dynatrace Query Language query, for example:
 
-See more [how Fluent Bit integrates with Dynatrace here](https://www.dynatrace.com/hub/detail/fluent-bit/?filter=log-management-and-analytics) and [Dynatrace Fluent Bit documentation](https://docs.dynatrace.com/docs/shortlink/lma-stream-logs-with-fluent-bit).
+    ```
+    fetch logs
+    ```
+
+## References
+
+* [2-minute video guide ](https://www.youtube.com/watch?v=JJJNxhtJ6R0)
+* [How Fluent Bit integrates with Dynatrace](https://www.dynatrace.com/hub/detail/fluent-bit/?filter=log-management-and-analytics) 
+* [Dynatrace Fluent Bit documentation](https://docs.dynatrace.com/docs/shortlink/lma-stream-logs-with-fluent-bit).
+* [Dynatrace Query Language documentation](https://docs.dynatrace.com/docs/platform/grail/dynatrace-query-language/dql-guide)
