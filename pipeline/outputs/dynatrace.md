@@ -55,7 +55,7 @@ Before starting you need to get a [Dynatrace API](https://docs.dynatrace.com/doc
 
 ## References
 
-* [Video: Stream a Log File to Dynatrace using FluentBit](https://www.youtube.com/watch?v=JJJNxhtJ6R0)
-* [How Fluent Bit integrates with Dynatrace](https://www.dynatrace.com/hub/detail/fluent-bit/?filter=log-management-and-analytics) 
-* [Dynatrace Fluent Bit documentation](https://docs.dynatrace.com/docs/shortlink/lma-stream-logs-with-fluent-bit).
+* [Dynatrace Fluent Bit documentation](https://docs.dynatrace.com/docs/shortlink/lma-stream-logs-with-fluent-bit)
+* [Fluent Bit integration in Dynatrace Hub](https://www.dynatrace.com/hub/detail/fluent-bit/?filter=log-management-and-analytics) 
+* [Video: Stream a Log File to Dynatrace using Fluent Bit](https://www.youtube.com/watch?v=JJJNxhtJ6R0)
 * [Blog: Easily stream logs from Fluent Bit to Dynatrace](https://www.dynatrace.com/news/blog/easily-stream-logs-with-fluent-bit-to-dynatrace/)
