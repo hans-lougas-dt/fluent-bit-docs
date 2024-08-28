@@ -22,7 +22,7 @@ Before starting you need to get a [Dynatrace API](https://docs.dynatrace.com/doc
 | json_date_format           | Date format standard for JSON                                                                                                                                                                                                       | iso8601                                            |
 | json_date_key              | Fieldname specifying message timestamp                                                                                                                                                                                              | timestamp                                          |
 | tls                        | Specify to use TLS                                                                                                                                                                                                                  | on                                                 |
-| tls.verify                 | TLS verification                                                                                                                                                                                                                    | off                                                |
+| tls.verify                 | TLS verification                                                                                                                                                                                                                    | on                                                 |
 
 ## Getting Started
 
@@ -44,7 +44,7 @@ Before starting you need to get a [Dynatrace API](https://docs.dynatrace.com/doc
     json_date_format iso8601
     json_date_key timestamp
     tls          On
-    tls.verify   Off
+    tls.verify   On
 ```
 
 4. Once the configuration is applied and new logs are appended, verify their receipt within Dynatrace. This can be done using Dynatrace [Notebooks](https://docs.dynatrace.com/docs/observe-and-explore/dashboards-and-notebooks/notebooks) with a Dynatrace Query Language query, for example:
